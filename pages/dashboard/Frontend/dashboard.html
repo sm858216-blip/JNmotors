@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JN Motors | Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="#">
+        <img src="../../../img/logo1.png" alt="logo taller">
+        
+      </a>
+
+      <div class="profile">
+        <div class="avatar">AJ</div>
+        <div>
+          <strong>Administración JN</strong>
+          <small>Administrador</small>
+        </div>
+      </div>
+
+      <nav class="navigation" aria-label="Navegación principal">
+        <a class="nav-link active" href="#"><i class="fa-solid fa-house"></i>Dashboard</a>
+        <a class="nav-link" href="#"><i class="fa-solid fa-users"></i>Usuarios</a>
+        <a class="nav-link" href="#"><i class="fa-solid fa-boxes-stacked"></i>Inventario</a>
+        <a class="nav-link" href="#"><i class="fa-solid fa-screwdriver-wrench"></i>Mantenimientos</a>
+        <a class="nav-link" href="#"><i class="fa-solid fa-file-invoice-dollar"></i>Ventas y facturas</a>
+        <a class="nav-link" href="#"><i class="fa-solid fa-chart-column"></i>Reportes</a>
+        <a class="nav-link" href="#"><i class="fa-solid fa-gear"></i>Configuración</a>
+      </nav>
+
+      <a class="logout" href="../../login/Frontend/login.html"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar sesión</a>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">CENTRO DE OPERACIONES</p>
+          <h1>Dashboard</h1>
+        </div>
+        <div class="topbar-actions">
+          <button class="theme-btn" id="themeToggle" type="button" aria-label="Cambiar a modo claro">
+            <i class="fa-solid fa-sun" aria-hidden="true"></i>
+            <span>Modo claro</span>
+          </button>
+          <div class="date"><span class="status-dot"></span>28 de oct de 2025</div>
+        </div>
+      </header>
+
+      <section class="stats" aria-label="Resumen general">
+        <article class="stat-card">
+          <p>Ventas registradas</p>
+          <h2>$ 45.220</h2>
+          <a href="#">Total recaudado</a>
+        </article>
+        <article class="stat-card">
+          <p>Pedidos pendientes</p>
+          <h2>1</h2>
+          <a href="#">Requieren atención</a>
+        </article>
+        <article class="stat-card">
+          <p>Mantenimientos</p>
+          <h2>0</h2>
+          <a href="#">Citas registradas</a>
+        </article>
+        <article class="stat-card">
+          <p>Stock bajo</p>
+          <h2>1</h2>
+          <a href="#">Revisar inventario</a>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <div>
+            <h2>Resumen del taller</h2>
+            <p>Productos con stock bajo</p>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Existencias</th>
+                <th class="price-column">Precio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Pastillas de freno</td>
+                <td>Frenos</td>
+                <td><span class="stock-warning">4</span></td>
+                <td class="price-column">$ 45.000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer class="footer">© 2026 JN Motors - Gestión integral del taller</footer>
+    </main>
+  </div>
+  <script src="../backend/scrip.js"></script>
+</body>
+</html>

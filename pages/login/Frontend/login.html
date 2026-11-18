@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plataforma de gestión de JN Motors, taller de motocicletas.">
+  <title>JN Motors | Crear cuenta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css"> 
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <div class="server-status"><span class="status-dot"></span> SERVIDOR TALLER OPERATIVO <span class="separator">|</span> <span class="version">V1.0</span></div>
+    </header>
+
+    <section class="main-content">
+      <section class="intro">
+        <div class="eyebrow"><span>ϟ</span> SISTEMA INTEGRAL DE DIAGNÓSTICO &amp; SERVICIO</div>
+        <h1>GESTIÓN DE ALTO<br>RENDIMIENTO PARA MOTOS</h1>
+        <p class="intro-copy">Monitorea hojas de servicio, telemetría de repuestos,<br class="desktop-break">
+          estados mecánicos y entrega de unidades en tiempo real<br class="desktop-break">
+          con precisión milimétrica.</p>
+
+        <div class="stats">
+          <article class="stat-card">
+            <strong>+1,500</strong>
+            <span>Motos atendidas este año</span>
+          </article>
+          <article class="stat-card">
+            <strong>99.8%</strong>
+            <span>Índice de satisfacción</span>
+          </article>
+        </div>
+
+        <div class="security-note">
+          <span class="shield">♧</span>
+          <span>Acceso cifrado de extremo a extremo conforme a<br class="desktop-break">
+          normativas de privacidad automotriz.</span>
+        </div>
+      </section>
+<!tarjeta de inicio con logo>
+      <section class="auth-card" aria-labelledby="form-title">
+        <a class="brand" href="#" aria-label="JN Motors inicio">
+        <img src="../../../img/logo1.png" alt="logo taller">
+          <span class="brand-subtitle">TALLER DE MOTOCICLETAS</span>
+        </a>
+
+        <div aria-label="Tipo de acceso">
+          <span class="brand-title">INICIAR SESION</span>
+        </div>
+
+        <form id="register-form">
+          <div class="field">
+            <label for="usuario"><br>CORREO O USUARIO</label>
+            <input id="Usuario" name="Usuario" type="text" placeholder="Carlosza12@gmail.com" autocomplete="usuario" required>
+          </div>
+
+          <div class="password-row">
+            <div class="field">
+              <label for="password">CONTRASEÑA</label>
+              <div class="input-icon">
+                <input id="password" name="password" type="password" placeholder="••••••••" minlength="8" autocomplete="new-password" required>
+                <button class="visibility" type="button" aria-label="Mostrar contraseña" data-target="password">◉</button>
+              </div>
+            </div>
+            
+
+          <label class="terms">
+            <input type="checkbox" name="terms" required>
+            <span>Acepto los <a href="#terms">términos de servicio</a> y política de tratamiento de datos<br class="desktop-break"> automotriz.</span>
+          </label>
+
+          <button class="submit-button" type="submit">Iniciar Sesion <span>→</span></button>
+          <p class="notice" id="notice" role="status" aria-live="polite"></p>
+        </form>
+          <div class="separator">
+            <hr>
+            <span>o</span>
+            <hr>
+          </div>
+          <script src="https://accounts.google.com/gsi/client" async defer></script>
+          <div id="g_id_onload"
+            data-client_id="TU_CLIENT_ID"
+            data-callback="handleCredentialResponse">
+          </div>
+        <div class="g_id_signin"
+          data-type="standard">
+        </div>
+
+      </section>
+    </section>
+  </main>
+
+  <script src="../../../Js/script.js">  
+    document.querySelectorAll('.visibility').forEach((button) => {
+      button.addEventListener('click', () => {
+        const input = document.getElementById(button.dataset.target);
+        input.type = input.type === 'password' ? 'text' : 'password';
+      });
+    });
+  </script>
+</body>
+</html>
